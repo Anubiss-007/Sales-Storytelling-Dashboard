@@ -4,23 +4,39 @@ import streamlit as st
 
 st.set_page_config(page_title="🏬 Sales Storytelling Dashboard", layout="wide")
 
+conn = st.connection("sql")
 @st.cache_data
-def load_data():
-    
-    df = pd.read_csv("Super_StoreOrders.csv", encoding="utf-8")
-    # df = pd.read_csv("/Users/Anubiss/Superstore/dataset/Super_StoreOrders.csv", encoding="utf-8")
+def load_data_from_sql():
+    query = "SELECT * FROM sales_table"
+    df = conn.query(query, ttl="10m") #เก็บ Cache ไว้ 10 นาที
 
-    df['order_date'] = pd.to_datetime(df['order_date'], format='mixed', dayfirst=True)  #แปลงวันที่
+    df['order_date'] = pd.to_datetime(df['order_date'], format='mixed', dayfirst=True)
     df['Month'] = df['order_date'].dt.to_period('M').astype('str')
-    
 
-    df['sales'] = df['sales'].astype(str).str.replace(',', '', regex=False) # ลบลูกน้ำ ,$, 
-    df['sales'] = df['sales'].str.replace('$', '', regex=False)
+    df['sales'] = df['sales'].astype(str).str.replace(',', '', regex=False).str.replace('$', '', regex=False)
     df['sales'] = pd.to_numeric(df['sales'], errors='coerce')
     
     return df
 
-df = load_data()
+df = load_data_from_sql()
+
+# @st.cache_data
+# def load_data():
+    
+#     df = pd.read_csv("Super_StoreOrders.csv", encoding="utf-8")
+#     # df = pd.read_csv("/Users/Anubiss/Superstore/dataset/Super_StoreOrders.csv", encoding="utf-8")
+
+#     df['order_date'] = pd.to_datetime(df['order_date'], format='mixed', dayfirst=True)  #แปลงวันที่
+#     df['Month'] = df['order_date'].dt.to_period('M').astype('str')
+    
+
+#     df['sales'] = df['sales'].astype(str).str.replace(',', '', regex=False) # ลบลูกน้ำ ,$, 
+#     df['sales'] = df['sales'].str.replace('$', '', regex=False)
+#     df['sales'] = pd.to_numeric(df['sales'], errors='coerce')
+    
+#     return df
+
+# df = load_data()
 
 st.sidebar.header("Filter Data")
 selected_category = st.sidebar.multiselect("Select Category",
