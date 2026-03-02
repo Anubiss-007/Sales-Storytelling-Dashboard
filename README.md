@@ -18,7 +18,7 @@ The core objective of this dashboard is to transform raw sales data into a compe
 ## 💡 Key Business Insights
 - **Top Profit Driver:** The **Technology** category is the primary driver of profitability, significantly outperforming Furniture and Office Supplies despite having a similar sales volume in some periods.
 - **Seasonal Peaks:** Both Sales and Profit show a strong upward trend with consistent seasonal peaks during Q4 of each year, suggesting high year-end demand.
-- **Growth Trajectory:** The business has demonstrated steady growth from 2011 to 2014, with monthly profit reaching record highs in late 2014.
+- **Growth Trajectory:** The business has demonstrated steady growth from 2011 to 2015, with monthly profit reaching record highs in late 2015.
 
 
 ## 📸 Screenshot
