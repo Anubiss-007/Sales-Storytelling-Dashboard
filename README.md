@@ -9,6 +9,8 @@ This project is an interactive E-Commerce Data Dashboard built with **Python** a
 
 The core objective of this dashboard is to transform raw sales data into a compelling **Data Story** using interactive visualizations, enabling faster and more effective data-driven decision-making.
 
+An interactive E-Commerce Data Dashboard built with **Python**, **Streamlit**, and **SQLite**. This project has been upgraded from a CSV-based system to a professional **SQL-driven architecture**, ensuring better data management, security via **Secrets Management**, and optimized performance using caching.
+
 ## ✨ Key Features
 - **Dynamic Filtering:** Users can filter data by specific product categories (e.g., Furniture, Office Supplies, Technology).
 - **Executive KPIs:** Instant overview of Total Sales, Total Profit, and Average Order Value (AOV).
@@ -31,3 +33,17 @@ The core objective of this dashboard is to transform raw sales data into a compe
 - **Data Manipulation & Cleaning:** Pandas
 - **Data Visualization:** Plotly Express
 - **Web Framework / UI:** Streamlit
+
+## 🚀 วิธีการเรียกใช้ในเครื่อง
+1. โคลน repository นี้
+
+2. ตรวจสอบให้แน่ใจว่าคุณมีไฟล์ฐานข้อมูล: `superstore.db`
+
+3. สร้างไฟล์ `.streamlit/secrets.toml` โดยใส่ URL การเชื่อมต่อ SQL ของคุณ
+
+4. ติดตั้งส่วนประกอบที่จำเป็น: `pip install -r requirements.txt`
+
+5. เรียกใช้แอปพลิเคชัน: `streamlit run app.py`
+
+**Author:** Saran (Anubiss!)
+[GitHub Profile](https://github.com/Anubiss-007)
