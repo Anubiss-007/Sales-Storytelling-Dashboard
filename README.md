@@ -2,7 +2,7 @@
 An interactive E-Commerce Sales Dashboard built with Python and Streamlit.
 # 📊 E-Commerce Sales Storytelling Dashboard
 
-**Live Demo:** [🔗 Click here]()
+**Live Demo:** [🔗 Click here](https://sales-storytelling-dashboard-t8gq33yuunnghynm4h4fxd.streamlit.app/)
 
 ## 📝 Project Overview
 This project is an interactive E-Commerce Data Dashboard built with **Python** and **Streamlit**. It is designed to help business stakeholders easily track key performance indicators (KPIs), analyze monthly sales trends, and compare performance across different product categories. 
@@ -22,6 +22,9 @@ The core objective of this dashboard is to transform raw sales data into a compe
 
 
 ## 📸 Screenshot
+<img width="1812" height="1106" alt="Screenshot 1" src="https://github.com/user-attachments/assets/a8eb392b-6c61-4cab-8fcb-a164f977fbdd" />
+<img width="1808" height="1106" alt="Screenshot 2" src="https://github.com/user-attachments/assets/577a213a-9ba5-4400-b47a-802e58fdc7b1" />
+
 
 ## 🛠️ Tech Stack & Tools
 - **Language:** Python
